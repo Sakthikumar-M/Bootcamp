@@ -15,9 +15,7 @@ public class Edit_worktype_grp {
 
 		// login to salesforce
 		base_classes_salesforce bc = new base_classes_salesforce();
-		String username = "hari.radhakrishnan@qeagle.com";
-		String pword = "India$321";
-		bc.logintoworkforce(dr, username, pword);
+		bc.logintoworkforce(dr, "hari.radhakrishnan@qeagle.com", "India$321");
 
 		// Navigate to work type group
 		JavascriptExecutor js = (JavascriptExecutor) dr;
