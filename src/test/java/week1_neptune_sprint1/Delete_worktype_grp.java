@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import week1_neptune.base_classes_salesforce;
 import week1_neptune.browser_cls;
 
-public class Edit_worktype_grp {
+public class Delete_worktype_grp {
 
 	public static void main(String[] args) throws Throwable {
 		// Open salesforce webpage
@@ -41,18 +41,13 @@ public class Edit_worktype_grp {
 		drop.click();
 		Thread.sleep(3000);
 		
-		//Select the Edit option
-		WebElement edit = dr.findElement(By.xpath("//div[contains(@class,'branding-actions actionMenu popup')]/div/ul/li[1]/a"));
-		edit.click();
+		//Select the Delete option
+		WebElement delete = dr.findElement(By.xpath("//div[contains(@class,'branding-actions actionMenu popup')]/div/ul/li[2]/a"));
+		delete.click();
 		//js.executeScript("arguments[0].click()", edit);
 		
-		WebElement edit_val = dr.findElement(By.xpath("//input[contains(@id,'126')]"));
-		edit_val.clear();
-		edit_val.sendKeys("leaf1 updated");
-		
-		WebElement save = dr.findElement(By.xpath("//div[contains(@class,'button-container-inner')]/button[3]/span"));
-		save.click();
-		 
+		WebElement del_button = dr.findElement(By.xpath("//button[@title='Delete']"));
+		del_button.click();
 	}
 
 }

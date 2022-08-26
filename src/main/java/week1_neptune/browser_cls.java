@@ -13,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class browser_cls {
-	public WebDriver dr = null;
+	public WebDriver dr;
 
 	public WebDriver open_browser(String browser, String url) {
 
@@ -30,7 +30,7 @@ public class browser_cls {
 
 		}
 		
-		dr.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));		
+		dr.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));		
 		return dr;
 
 	}
